@@ -1,7 +1,8 @@
 blank_issues_enabled: true
 contact_links:
-  - name: AI-CSL Skool community (#Build Questions)
-    url: https://skool.com/cloud-security-lab
-    about: Fastest path for lab-run questions — community jumps in too.
-  - name: DM Josh directly in Skool
-    about: If it feels weird, small, or dumb — just send it over.
+  - name: Questions
+    url: https://github.com/joshbotz/wazuh-ai-soc-lab/discussions
+    about: Stuck on a step or unsure if something is a bug? Ask here.
+  - name: Email
+    url: mailto:josh@joshbotz.com
+    about: If it feels small or dumb, send it anyway.
