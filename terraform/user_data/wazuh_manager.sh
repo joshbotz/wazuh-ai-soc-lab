@@ -99,23 +99,23 @@ fi
 # Timeout 300s = auto-rollback after 5 minutes so the lab doesn't accumulate
 # iptables rules. For a production deploy, students learn to raise/remove
 # the timeout deliberately.
-# Idempotency strategy: DELETE any existing AI-CSL:auto-AR block first, then
+# Idempotency strategy: DELETE any existing LAB:auto-AR block first, then
 # insert fresh. Using a grep-based guard alone isn't sufficient — we saw
 # duplicate blocks in v3 deployed configs. Delete-then-insert is bulletproof
 # regardless of how many times user_data executes.
 echo "=== Installing automatic active-response triggers (idempotent) ==="
-sed -i '/<!-- AI-CSL:auto-AR -->/,/<!-- AI-CSL:auto-AR-end -->/d' /var/ossec/etc/ossec.conf
-sed -i '0,/<\/ossec_config>/{s|<\/ossec_config>|<!-- AI-CSL:auto-AR -->\\n<active-response>\\n  <command>firewall-drop</command>\\n  <location>local</location>\\n  <rules_id>5712,5720</rules_id>\\n  <timeout>300</timeout>\\n</active-response>\\n<!-- AI-CSL:auto-AR-end -->\\n</ossec_config>|}' /var/ossec/etc/ossec.conf
+sed -i '/<!-- LAB:auto-AR -->/,/<!-- LAB:auto-AR-end -->/d' /var/ossec/etc/ossec.conf
+sed -i '0,/<\/ossec_config>/{s|<\/ossec_config>|<!-- LAB:auto-AR -->\\n<active-response>\\n  <command>firewall-drop</command>\\n  <location>local</location>\\n  <rules_id>5712,5720</rules_id>\\n  <timeout>300</timeout>\\n</active-response>\\n<!-- LAB:auto-AR-end -->\\n</ossec_config>|}' /var/ossec/etc/ossec.conf
 
 # Verify exactly one block installed. Idempotency is bulletproof via the
 # delete-then-insert above, so the check is a sanity log only — no exit on
 # mismatch, because the post-install bootstrap depends on cloud-final
 # completing successfully.
-AR_COUNT=$(grep -c "<!-- AI-CSL:auto-AR -->" /var/ossec/etc/ossec.conf || true)
-echo "=== AI-CSL:auto-AR block count: $${AR_COUNT} (expected 1) ==="
+AR_COUNT=$(grep -c "<!-- LAB:auto-AR -->" /var/ossec/etc/ossec.conf || true)
+echo "=== LAB:auto-AR block count: $${AR_COUNT} (expected 1) ==="
 if [ "$${AR_COUNT}" != "1" ]; then
   echo "=== WARN: AR block count unexpected, but continuing. Diagnostic: ==="
-  grep -n "AI-CSL\|ossec_config" /var/ossec/etc/ossec.conf
+  grep -n "LAB:\|ossec_config" /var/ossec/etc/ossec.conf
 fi
 
 systemctl restart wazuh-manager

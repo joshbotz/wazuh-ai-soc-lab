@@ -1,22 +1,20 @@
-# AI Cloud Security Lab — Course 3: Wazuh SIEM + AI-augmented SOC
+# Running this lab in a group or class
 
-> Course context for any AI assistant helping with this repo. The primary teaching surface is `.claude/skills/course-3-instructor/SKILL.md` (the Mateo persona) which auto-loads in Claude Code. This file is a cold-start map for assistants that don't load that skill.
-
----
-
-## Where the course lives
-
-**The course is the repo.** Students clone this repo, launch Claude Code, and tell it "I'm starting Course 3." The course-3-instructor skill activates Mateo (a senior-SOC-analyst persona), who guides the student through all six lessons end-to-end.
-
-Skool is the front door — landing page, outline, help-question channel, community. It does NOT hold the lesson content. Don't refer students back to Skool lessons; they don't exist there.
-
-**If a student asks something the skill file doesn't cover:** read `.claude/skills/course-3-instructor/SKILL.md` — that's the source of truth.
+> Context for any AI assistant helping with this repo. The primary teaching surface is `.claude/skills/course-3-instructor/SKILL.md` (the Mateo persona) which auto-loads in Claude Code. This file is a cold-start map for assistants that don't load that skill.
 
 ---
 
-## Course structure
+## How to run it
 
-Course 3 has **6 core lessons** that run as one ~2-hour continuous session, plus **5 optional modular labs** (paid add-ons) that use the same deployed lab.
+**The lab is the repo.** Each person clones it, launches Claude Code, and tells it "start the Wazuh lab." The instructor skill activates Mateo (a senior-SOC-analyst persona), who guides them through all six phases end-to-end. It works solo, in a workshop, or as a class assignment — everyone deploys their own copy in their own AWS account.
+
+**If someone asks something the skill file doesn't cover:** read `.claude/skills/course-3-instructor/SKILL.md` — that's the source of truth.
+
+---
+
+## Lab structure
+
+The lab has **6 core phases** that run as one ~2-hour continuous session.
 
 ### Narrative frame (critical — do not break)
 
@@ -34,18 +32,6 @@ Course 3 is a continuation of the CloudVault Financial arc from Courses 1-2. The
 | 4 | 🎯 The backdoor hunt | Four structured hunts against the three persistence categories from the IR report (account, listener, scheduler) plus an AI-verification drill. Hypothesis / query / disposition framing → hunt log → SOC 2 evidence. |
 | 5 | ⚡ Tripwires and response | Rule-syntax primer against a real Wazuh default. Student writes rule 100001 (CloudVault client-data tripwire Dana asked for), validates with `wazuh-logtest`, deploys, triggers, verifies firing via MCP. Duration-based active response (anti-`wazuh_firewall_allow` quirk). |
 | 6 | 🧹 Close the case | Compressed IR on a fresh alert (brute-force on web-server-01). Evidence package for Dana + SOC 2 (CC7.1 / CC7.2). Personal artifact for interviews. `terraform destroy` with verification. |
-
-### Optional paid labs (career-path oriented)
-
-Not in this repo — sold as modular add-ons post-launch. Each uses the same core lab deploy:
-
-- **Lab A — AWS Log Connection** (Cloud Detection Engineer): ingest CloudTrail + VPC Flow Logs + GuardDuty into Wazuh, write detection rules on real AWS log shapes
-- **Lab B — SOC 2 Evidence Package** (GRC/Audit): auditor-grade evidence for CC7.2, CC6.1, CC7.1
-- **Lab C — Threat Hunting Playbook** (SOC Analyst): 10 hunts with dispositions and detection-gap recommendations
-- **Lab D — Automated Incident Response** (SOAR/Platform Sec): 1 full auto-chain + 2 MCP-driven playbooks
-- **Lab E — Vulnerability Management Workflow** (SRE w/ security scope): 4-axis triage + live-validated remediation
-
-**If a student asks about a paid lab before purchase:** acknowledge it exists as a paid add-on, don't pretend to run it. Direct them to the Skool upgrade path.
 
 ---
 

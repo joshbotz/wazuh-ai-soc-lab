@@ -46,7 +46,7 @@ resource "aws_vpc" "lab" {
   enable_dns_hostnames = true
 
   tags = {
-    Name        = "ai-csl-wazuh-lab"
+    Name        = "wazuh-ai-soc-lab"
     Project     = "ai-csl-wazuh-lab"
     Environment = var.environment
   }
