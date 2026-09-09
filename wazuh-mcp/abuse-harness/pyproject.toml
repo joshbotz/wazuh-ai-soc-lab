@@ -1,7 +1,7 @@
 [project]
 name = "ai-csl-mcp-abuse-harness"
 version = "1.0.0"
-description = "5-pattern adversarial test suite for AI-CSL Course 09 Lesson 5"
+description = "5-pattern adversarial test suite for Wazuh AI SOC Lab Lesson 5"
 requires-python = ">=3.10"
 dependencies = ["pytest>=8,<9"]
 

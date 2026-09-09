@@ -1,4 +1,4 @@
-# Wazuh single-node sandbox for AI-CSL Course 09 Lesson 5.
+# Wazuh single-node sandbox for Wazuh AI SOC Lab Lesson 5.
 #
 # Brings up Wazuh Manager + Indexer + Dashboard on a 16GB laptop in ~3-8 min
 # (first pull). Manager API exposed on localhost:55000 so the student's MCP

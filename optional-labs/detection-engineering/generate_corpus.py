@@ -1,4 +1,4 @@
-"""Synthetic Windows/Sysmon event corpus for AI-CSL Course 09 Lesson 3.
+"""Synthetic Windows/Sysmon event corpus for Wazuh AI SOC Lab Lesson 3.
 
 Emits a labeled JSONL corpus students can run pySigma-converted rules against
 to measure FALSE-POSITIVE rate against ground truth. Inspired by Bousseaden's

@@ -1,6 +1,6 @@
 # Wazuh sandbox — single-node docker-compose
 
-Single-node Wazuh stack (Manager + Indexer + Dashboard) for AI-CSL Course 09 Lesson 5. Runs on a 16GB laptop alongside Claude Code + a browser.
+Single-node Wazuh stack (Manager + Indexer + Dashboard) for Wazuh AI SOC Lab Lesson 5. Runs on a 16GB laptop alongside Claude Code + a browser.
 
 ## Before you start (preflight)
 

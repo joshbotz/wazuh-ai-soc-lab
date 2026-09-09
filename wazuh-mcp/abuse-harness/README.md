@@ -1,6 +1,6 @@
 # wazuh-mcp abuse-harness — 6-pattern adversarial test suite
 
-The course-shipped MCP-server abuse harness for AI-CSL Course 09 Lesson 5.
+The course-shipped MCP-server abuse harness for Wazuh AI SOC Lab Lesson 5.
 
 The student's MCP server (Wazuh by default; alternate backends per the lesson) **must pass all 6** before the lesson is done.
 

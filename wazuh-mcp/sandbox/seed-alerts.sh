@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Seed the Wazuh sandbox with synthetic alerts for AI-CSL Course 09 Lesson 5.
+# Seed the Wazuh sandbox with synthetic alerts for Wazuh AI SOC Lab Lesson 5.
 #
 # Includes:
 #   - 30 routine simulated events across 6 rule categories (auth fail, web,

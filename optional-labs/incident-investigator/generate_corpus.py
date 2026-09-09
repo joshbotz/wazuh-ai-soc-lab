@@ -1,4 +1,4 @@
-"""Synthetic CloudTrail corpus generator for AI-CSL Course 09 Lesson 4.
+"""Synthetic CloudTrail corpus generator for Wazuh AI SOC Lab Lesson 4.
 
 Emits a JSONL file (~30k events) telling a coherent incident story:
 - ~80% benign baseline traffic across 50 principals over 14 days

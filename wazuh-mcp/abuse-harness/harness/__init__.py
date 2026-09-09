@@ -1,4 +1,4 @@
-"""AI-CSL Course 09 Lesson 5 — MCP server abuse harness.
+"""Wazuh AI SOC Lab Lesson 5 — MCP server abuse harness.
 
 5-pattern adversarial test suite. The student's MCP server must pass all 5.
 
